@@ -5,4 +5,6 @@ router.get("/", (req, res) => {
     res.render("pages/index");
 });
 
+router.use("/funds", require("./funds"));
+
 module.exports = router;
