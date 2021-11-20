@@ -44,7 +44,7 @@ router.post("/feedback_string", async (req, res) => {
     feedback_obj.sentiment = data.score;
 
     await add_feedback(feedback_obj);
-    //await updateAnalytics(feedback_obj.sentiment);
+    await updateAnalytics(feedback_obj.sentiment);
     res.send("success");
 });
 
