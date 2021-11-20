@@ -2,9 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("pages/new_index");
+  console.log("home");
+  res.render("pages/home");
 });
 
-router.use("/funds", require("./funds"));
+router.use("/auth", require("./auth"));
+router.use(require("./dashboard"));
 
 module.exports = router;
