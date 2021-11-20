@@ -4,6 +4,8 @@ const db = admin.firestore();
 
 module.exports.donatefunds = async (req, res) => {
     const data = req.body;
+
+    console.log(data);
     const result = await db.collection("Funds").doc().set(data);
     res.json({ message: "Success", id: result.id });
 };

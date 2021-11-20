@@ -3,6 +3,6 @@ const router = express.Router();
 
 const fundscontroller = require("../controllers/funds.controller");
 
-router.post("/", fundscontroller.donatefunds);
+router.post("/donatefunds", fundscontroller.donatefunds);
 
 module.exports = router;
